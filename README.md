@@ -1,6 +1,26 @@
 # Upload
 
+
 This component simplifies file validation and uploading.
+
+##HOWEVER, It has been modified and purposly made insecure for inclusion in the U-hack-it project 
+###Do Not use this in a production enviroment EVER!
+
+
+
+
+When the HTML form is submitted, the server-side PHP code can validate and upload the file like this:
+
+However we turn off key features here, and remove mime-type validation and checking, so now it becomes vulnrable..
+
+eventhough we have left other forms of validation in place...
+- This is a terrible practice, as simple form validation is not enough.. 
+- Even with mime type validation, The Gifar dual file type showed the error in this logic, 
+-  + So the solution is to lockdown the image upload process  and not let files be executed from as a result...
+   + the properly sanitizend and validated code for this example will be included in the U-Can't-Hack-it Repo
+   + 
+   
+
 
 ## Usage
 
@@ -13,7 +33,9 @@ Assume a file is uploaded with this HTML form:
 </form>
 ```
 
-When the HTML form is submitted, the server-side PHP code can validate and upload the file like this:
+
+
+
 
 ```php
 <?php
@@ -77,7 +99,7 @@ Install via composer:
 ```
 php composer.phar install
 ```
-## Author
+## Original Author
 
 [Josh Lockhart](https://github.com/codeguy)
 
